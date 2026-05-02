@@ -1,20 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap');
-
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --text: #f0f2f8;
-  --accent: #7ed6ff;
   --muted: #9aa3b8;
-  --fh: 'Syne', sans-serif;
-  --fm: 'Space Mono', monospace;
 }
 
 html, body {
   height: 100%;
   background: linear-gradient(180deg, #02030a 0%, #05080f 50%, #06101f 100%);
-  color: var(--text);
-  font-family: var(--fh);
+  color: white;
+  font-family: sans-serif
 }
 
 body {
@@ -32,7 +26,7 @@ body {
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 .logo {
-  font-family: var(--fh);
+  font-family: sans-serif;
   font-size: 42px;
   font-weight: 800;
   letter-spacing: -2px;
@@ -72,7 +66,7 @@ body {
   border: 1px solid rgba(255,255,255,0.12);
   background: rgba(255,255,255,0.05);
   color: #c8cedd;
-  font-family: var(--fh);
+  font-family: sans-serif;
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
@@ -125,15 +119,15 @@ body {
 }
 
 .info-label {
-  font-family: var(--fm);
+  font-family: sans-serif;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: var(--accent);
+  color: var(--muted);
 }
 
 .info-card h2 {
-  font-family: var(--fh);
+  font-family: sans-serif;
   font-size: 28px;
   font-weight: 800;
   color: #fff;
@@ -154,7 +148,7 @@ body {
   border: 1px solid rgba(255,255,255,0.07);
 }
 .info-grid span {
-  font-family: var(--fm);
+  font-family: sans-serif;
   font-size: 10px;
   color: var(--muted);
   text-transform: uppercase;
@@ -163,11 +157,25 @@ body {
   margin-bottom: 5px;
 }
 .info-grid strong {
-  font-family: var(--fh);
+  font-family: sans-serif;
   font-size: 14px;
   font-weight: 600;
   color: #e4e8f4;
   line-height: 1.4;
+}
+
+/* ── Mobile (≤480px) ── */
+@media (max-width: 480px) {
+  body { padding: 12px; gap: 10px; }
+  .logo { font-size: 26px; letter-spacing: -1px; }
+  .planet-button { font-size: 13px; padding: 7px 14px; }
+  .stage-card { padding: 14px; gap: 10px; }
+  .info-card { padding: 14px; }
+  .info-card h2 { font-size: 20px; }
+  .info-label { font-size: 10px; letter-spacing: 2px; }
+  .info-grid span { font-size: 9px; letter-spacing: 1px; }
+  .info-grid strong { font-size: 12px; }
+  .info-grid > div { padding: 10px; }
 }
 
 /* ── Desktop (≥900px) ── */
@@ -191,10 +199,10 @@ body {
     flex-shrink: 0;
   }
   .panel-head h2 {
-    font-family: var(--fh);
+    font-family: sans-serif;
     font-size: 16px;
     font-weight: 700;
-    color: #fff;
+    color:#e4e8f4 ;
     letter-spacing: -0px;
   }
 
